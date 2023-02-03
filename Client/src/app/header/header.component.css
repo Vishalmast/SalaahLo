@@ -23,7 +23,7 @@ header {
 }
 
 .navbar-nav>li:hover {
-    border-bottom: 1px solid #fff
+    border-bottom: 1px solid rgb(151, 117, 117)
 }
 
 .navbar-nav>.active {
@@ -76,6 +76,6 @@ header {
 }
 
 .btn.order-button:hover {
-    border: 2px solid #ce0000;
-    color: #ce0000
+    border: 2px solid #a15410;
+    color: #a15410
 }
