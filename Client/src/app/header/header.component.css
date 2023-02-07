@@ -27,29 +27,99 @@ header {
 }
 
 .navbar-nav>.active {
-    border-bottom: 1px solid #fff
+    border-bottom: 1px solid #a15410
 }
 
 .navbar-brand {
     font-family: 'Allerta Stencil', sans-serif;
-    color: #83ff00
+    color: #a15410
 }
 
 .navbar-brand:hover {
-    color: #fff
+    color: #c5ba26
 }
 
 .left-side img {
     padding-top: 100px
 }
 
+.shapeinterface {
+    border-radius: 50%;
+    display: inline-block;
+    background: linear-gradient(to bottom, #7A0800, #1465a3 90%);
+    /* background: linear-gradient(to bottom, #ce0000, #7A0800 90%); */
+    position: absolute;
+}
+
 .shape {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, #ce0000, #7A0800 70%);
+    /* background: linear-gradient(to bottom, #ce0000, #7A0800 70%); */
+    /* background: linear-gradient(to bottom, #4890c7, #1465a3 90%); */
+    /* background: #4890c7; */
     position: absolute;
     -webkit-clip-path: ellipse(500px 500px at 10% 5%)
 }
+.shapelast {
+    top: 87%;
+    /* left: 2%; */
+    width: 140vh;
+    height: 140vh;
+    background: linear-gradient(to bottom, #ce0000, #7A0800 70%);
+    /* background: linear-gradient(to bottom, #ce0000, #7A0800 70%); */
+    /* background: linear-gradient(to bottom, #4890c7, #1465a3 90%); */
+    /* background: #4890c7; */
+    position: absolute;
+    border-radius: 50%;
+    /* -webkit-clip-path: ellipse(500px 500px at 10% 5%); */
+    /* transform: rotate(180); */
+    transform: rotate(180deg);
+    left: 26%;
+    overflow: hidden;
+    
+}
+
+.shape2 {
+    height: 65px;
+    width: 65px;
+    left: 92%;
+}
+
+.shape3 {
+    height: 165px;
+    width: 165px;
+    left: 77%;
+    top: 59%;
+}
+
+.shape4 {
+    height: 85px;
+    width: 85px;
+    left: 28%;
+    top: 78%;
+}
+
+.shape5 {
+    height: 95px;
+    width: 95px;
+    left: 49%;
+    top: 30%;
+}
+.shape6 {
+    height: 9px;
+    width: 9px;
+    left: 76.6%;
+    top: 24.34%;
+    /* background: linear-gradient(to bottom, #cce638, #cce638 70%); */
+}
+.shape7 {
+    height: 40px;
+    width: 40px;
+    left: 63%;
+    top: 78%;
+}
+
 
 .right-side {
     padding-top: 150px
@@ -69,13 +139,17 @@ header {
 
 .btn.order-button {
     background: transparent;
-    border: 2px solid #83ff00;
-    color: #83ff00;
+    border: 2px solid #a15410;
+    color: #a15410;
+    /* border: 2px solid #83ff00;
+    color: #83ff00; */
     border-radius: 30%;
     transition: 0.7s
 }
 
 .btn.order-button:hover {
-    border: 2px solid #a15410;
-    color: #a15410
+    border: 2px solid #c5ba26;
+    color: #c5ba26;
+    /* border: 2px solid #83ff00;
+    color: #83ff00; */
 }
