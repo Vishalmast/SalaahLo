@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService } from 'src/app/Shared/Services/account.service';
 import { AlertService } from 'src/app/Shared/Services/alert.service';
@@ -51,12 +51,12 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe({
                 next: () => {
-                    // get return url from query parameters or default to home page
-                    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-                    this.router.navigateByUrl(returnUrl);
+                    // this.alertService.success('LOGGED IN');
+                    alert("You have been logged in");
                 },
                 error: error => {
-                    this.alertService.error(error);
+                    alert("wrong Username/Password");
+                    // this.alertService.error(error);
                     this.loading = false;
                 }
             });
