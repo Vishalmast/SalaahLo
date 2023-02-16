@@ -3,19 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './home/header/header.component';
 import { NgbAccordion, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './home/header/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 import { AlertComponent } from './Shared/Components';
+import { HomeComponent } from './home/home.component';
+import { BodyComponent } from './home/body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    AlertComponent
+    AlertComponent,
+    HomeComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
