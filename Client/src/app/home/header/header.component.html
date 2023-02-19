@@ -2,23 +2,14 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-transparent">
       <a class="navbar-brand" href="#">Salaah Lo</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >HOME <span class="sr-only"></span></a
-            >
+            <a class="nav-link" href="#">HOME <span class="sr-only"></span></a>
           </li>
           <li class="nav-item"><a class="nav-link" href="#">Doctor</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Teacher</a></li>
@@ -26,9 +17,40 @@
           <li class="nav-item"><a class="nav-link" href="#">Singer</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Software Engineer</a></li>
           <!-- <li class="nav-item position-absolute end-0 me-5 pt-0 btn"><app-login></app-login></li> -->
-          <li class="nav-item position-absolute end-0 me-5 pt-0 btn" (click)="open()"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item position-absolute end-0 me-5 pt-0 mt-0 btn" *ngIf="currentUser === null" (click)="open()">
+            <a class="nav-link" href="#">Login</a></li>
+          <!-- <li class="nav-item position-absolute end-0 me-5 pt-0 mt-0 btn user" *ngIf="currentUser !== null" -->
+            <!-- (click)="openUser()"><a class="nav-link" href="#">{{currentUser}}</a></li> -->
+            
+            <div class="nav-item position-absolute end-0 me-5 pt-0 mt-1 btn" *ngIf="currentUser !== null">
+              <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary user" id="dropdownBasic1" ngbDropdownToggle>
+                  {{currentUser}}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem (click)="openUser()">My Profile</button>
+                  <button ngbDropdownItem (click)="logout()">LOGOUT</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
         </ul>
       </div>
     </nav>
   </header>
 </div>
+
+  <ng-template #userpage let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{currentUsername}}</h4>
+    </div>
+    <div class="modal-body">
+      
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="logout()">LOGOUT</button>
+    </div>
+  </ng-template>

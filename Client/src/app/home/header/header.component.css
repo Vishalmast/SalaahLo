@@ -28,6 +28,20 @@
     padding-top: 100px
 }
 
+.user:hover {
+    border: 2px solid #c5ba26;
+    /* color: #c5ba26; */
+    background-color: #7A0800;
+}
+
+.user{
+    /* background-color: #1465a3; */
+    border: 2px solid #7A0800;
+    background-color: #7A0800;
+    color: white;
+    border:none
+}
+
 .shapeinterface {
     border-radius: 50%;
     display: inline-block;
@@ -104,3 +118,14 @@
     left: 63%;
     top: 78%;
 }
+
+
+
+.custom-class {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translateY(-50%);
+  }
+
+
