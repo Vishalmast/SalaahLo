@@ -1,4 +1,4 @@
-<div id="exampleModal" tabindex="-1">
+<div id="exampleModal" tabindex="-1" *ngIf="!register">
       <div class="modal-body w-100 h-100">
         <button type="button" (click)="close()" class="btn-close position-absolute end-0 me-4 bg-dark"></button>
         <div class="myform bg-dark">
@@ -25,9 +25,88 @@
                 <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
                 LOGIN
               </button>
-              <p>Not a member? <a href="#">Signup now</a></p>
+              <p (click)="signup()">Not a member? <a href="#">Signup now</a></p>
             </div>
           </form>
         </div>
       </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+<div class="card" *ngIf="register">
+
+
+
+  <div class="modal-body w-100 h-100">
+    <button type="button" (click)="close()" class="btn-close position-absolute end-0 me-4 bg-dark"></button>
+    <div class="myform bg-dark">
+      <h1 class="text-center">Signup Form</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+        <div>
+          <label class="form-label">Username</label>
+          <input type="text" formControlName="username" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.username.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.username.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.username.errors.required">Username is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">First Name</label>
+          <input type="text" formControlName="firstname" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.firstname.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.firstname.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.firstname.errors.required">First Name is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Last Name</label>
+          <input type="text" formControlName="lastname" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.lastname.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.lastname.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.lastname.errors.required">Last Name is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Email</label>
+          <input type="text" formControlName="email" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.email.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.email.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.email.errors.required">Email is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Phone Number</label>
+          <input type="text" formControlName="phone" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.username.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.username.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.username.errors.required">Phone Number is required</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.password.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.password.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-light mt-3">
+            <span *ngIf="registerLoading" class="spinner-border spinner-border-sm me-1"></span>
+            REGISTER
+          </button>
+          <p (click)="signup()">Already a member? <a href="#">Login now</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+

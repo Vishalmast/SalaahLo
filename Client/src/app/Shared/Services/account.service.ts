@@ -46,6 +46,16 @@ export class AccountService {
     }
 
     register(user: User) {
+        return this.http.post<User>(`${environment.apiUrl}/signup`, { user})
+            .pipe(map(user => {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                // localStorage.setItem('user', JSON.stringify(user.firstname));
+                // localStorage.setItem('username', JSON.stringify(user.username));
+                // localStorage.setItem('user', user.firstname!);
+                // localStorage.setItem('username', user.username!);
+                // this.userSubject.next(user);
+                return user;
+            }));
         return this.http.post(`${environment.apiUrl}/signup`, user);
     }
 
