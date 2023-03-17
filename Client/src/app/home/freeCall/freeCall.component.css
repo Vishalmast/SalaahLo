@@ -1,19 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
-.container {
-    height: 100vh;
-}
-.right-side {
-    padding-top: 150px
-}
 
-.right-side h1 {
+
+h1 {
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 2.4em;
     text-align: center
 }
 
-.right-side p {
+p {
     font-size: 1.5em;
     text-align: center;
     font-weight: bold

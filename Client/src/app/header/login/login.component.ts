@@ -85,7 +85,12 @@ export class LoginComponent implements OnInit {
                     location.reload();
                 },
                 error: error => {
-                    alert("Something went wrong");
+                    if (error.error.message === "User already exist"){
+                        alert(error.error.message);
+                    }
+                    else{
+                        alert("Something went wrong");
+                    }
                     this.registerLoading = false;
                 }
             });

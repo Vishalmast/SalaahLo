@@ -1,0 +1,115 @@
+<div class="container-fluid px-0">
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-transparent">
+      <a *ngIf="!salaahDo" class="navbar-brand title fs-4" href="#">Salaah Lo</a>
+      <a *ngIf="salaahDo" class="navbar-brand title fs-4" href="#">Salaah Do</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Doctor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Teacher</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cricketer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Singer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Software Engineer</a></li>
+          <!-- <li class="nav-item position-absolute end-0 me-5 pt-0 btn"><app-login></app-login></li> -->
+          <li class="nav-item position-absolute end-0 me-5 pt-0 mt-0 btn fs-5" *ngIf="currentUser === null" (click)="open()">
+            <a class="nav-link" href="#">Login</a></li>
+          <!-- <li class="nav-item position-absolute end-0 me-5 pt-0 mt-0 btn user" *ngIf="currentUser !== null" -->
+            <!-- (click)="openUser()"><a class="nav-link" href="#">{{currentUser}}</a></li> -->
+            
+            <div class="nav-item position-absolute end-0 me-5 pt-0 mt-1 btn" *ngIf="currentUser !== null">
+              <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary user" id="dropdownBasic1" ngbDropdownToggle>
+                  {{currentUser}}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem (click)="openUser()">My Profile</button>
+                  <button ngbDropdownItem (click)="logout()">LOGOUT</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
+
+  <ng-template #userpage let-modal>
+    <div class="modal-header myform bg-dark">
+      <h4 class="modal-title" id="modal-basic-title">{{currentUsername}}</h4>
+    </div>
+    <div class="modal-body myform bg-dark">
+      
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="logout()">LOGOUT</button>
+    </div>
+  </ng-template>
+
+
+
+<!-- 
+  
+  <div class="modal-body w-100 h-100">
+    <button type="button" (click)="close()" class="btn-close position-absolute end-0 me-4 bg-dark"></button>
+    <div class="myform bg-dark">
+      <h1 class="text-center">Signup Form</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+        <div>
+          <label class="form-label">Username</label>
+          <input type="text" formControlName="username" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.username.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.username.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.username.errors.required">Username is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">First Name</label>
+          <input type="text" formControlName="firstname" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.firstname.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.firstname.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.firstname.errors.required">First Name is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Last Name</label>
+          <input type="text" formControlName="lastname" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.lastname.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.lastname.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.lastname.errors.required">Last Name is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Email</label>
+          <input type="text" formControlName="email" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.email.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.email.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.email.errors.required">Email is required</div>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Phone Number</label>
+          <input type="text" formControlName="phone" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.username.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.username.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.username.errors.required">Phone Number is required</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control"
+            [ngClass]="{ 'is-invalid': registerSubmitted && registrationDetails.password.errors }" />
+          <div *ngIf="registerSubmitted && registrationDetails.password.errors" class="invalid-feedback">
+            <div *ngIf="registrationDetails.password.errors.required">Password is required</div>
+          </div>
+        </div> -->
