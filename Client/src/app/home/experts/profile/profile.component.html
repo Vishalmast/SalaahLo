@@ -1,18 +1,22 @@
-<div class="profileContainer">
-    <div class="card" style="width: 18rem;">
-        <img src="assets/vishal.jpg" class="card-img-top" alt="No image">
-        <div class="card-body">
-          <h5 class="card-title">{{this.expert.name}}</h5>
-          <p class="card-text">{{this.expert.desc}}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{this.expert.field1}}</li>
-          <li class="list-group-item">{{this.expert.field2}}</li>
-          <li class="list-group-item">{{this.expert.field3}}</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
+
+<div *ngFor="let item of ">
+
+</div>
+<div class="profile-card">
+  <img src="assets/vishal.jpg" alt="Profile Image" class="profile-image">
+  <h3 class="profile-name">Vishal Kumar</h3>
+  <p class="profile-description">Software Engineer</p>
+  <div class="profile-achievements">
+    <p class="achievement">Achievement 1</p>
+    <p class="achievement">Achievement 2</p>
+    <p class="achievement">Achievement 3</p>
+  </div>
+  <div class="profile-ratings">
+    <span class="rating">4.5</span>
+    <span class="num-ratings">(120)</span>
+  </div>
+  <div class="profile-actions">
+    <button class="btn-connect">Schedule</button>
+    <button class="btn-message">Ping</button>
+  </div>
 </div>

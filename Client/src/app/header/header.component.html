@@ -1,60 +1,59 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 headerClass">
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-transparent">
+    <nav style="background-color: black;" class="navbar fixed-top navbar-expand-lg navbar-transparent">
       <a *ngIf="!salaahDo" class="navbar-brand title fs-4" href="#">Salaah Lo</a>
       <a *ngIf="salaahDo" class="navbar-brand title fs-4" href="#">Salaah Do</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler" style="background-color: #a15410; margin-right: 15px;" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">HOME <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Doctor</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Teacher</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Cricketer</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Singer</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Software Engineer</a></li>
-          <!-- <li class="nav-item position-absolute end-0 me-5 pt-0 btn"><app-login></app-login></li> -->
-          <li class="nav-item position-absolute end-0 me-5 pt-0 mt-0 btn fs-5" *ngIf="currentUser === null" (click)="open()">
-            <a class="nav-link" href="#">Login</a></li>
-          <!-- <li class="nav-item position-absolute end-0 me-5 pt-0 mt-0 btn user" *ngIf="currentUser !== null" -->
-            <!-- (click)="openUser()"><a class="nav-link" href="#">{{currentUser}}</a></li> -->
-            
-            <div class="nav-item position-absolute end-0 me-5 pt-0 mt-1 btn" *ngIf="currentUser !== null">
-              <div ngbDropdown class="d-inline-block">
-                <button type="button" class="btn btn-outline-primary user" id="dropdownBasic1" ngbDropdownToggle>
-                  {{currentUser}}
-                </button>
-                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button ngbDropdownItem (click)="openUser()">My Profile</button>
-                  <button ngbDropdownItem (click)="logout()">LOGOUT</button>
-                </div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item text-center" [class.active]=isFeedActive><a class="nav-link" href="#">Feed</a></li>
+          <li class="nav-item text-center" [class.active]=isChatsActive><a class="nav-link" href="/chats">Chats</a></li>
+        </ul>
+        <ul>
+          <span class="nav-item" *ngIf="currentUser === null" (click)="open()">
+            <a class="nav-link btn me-4 pt-2" style="color: white;" href="#">Login</a>
+          </span>
+          <div class="nav-item pt-0 mt-1 btn" *ngIf="currentUser !== null">
+            <div ngbDropdown class="d-inline-block">
+              <button type="button" class="btn btn-outline-primary user" id="dropdownBasic1" ngbDropdownToggle>
+                {{currentUser}}
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem (click)="openUser()">My Profile</button>
+                <button ngbDropdownItem (click)="logout()">LOGOUT</button>
               </div>
             </div>
-
-
-
+          </div>
 
         </ul>
       </div>
+
+
     </nav>
   </header>
 </div>
 
-  <ng-template #userpage let-modal>
-    <div class="modal-header myform bg-dark">
-      <h4 class="modal-title" id="modal-basic-title">{{currentUsername}}</h4>
-    </div>
-    <div class="modal-body myform bg-dark">
-      
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="logout()">LOGOUT</button>
-    </div>
-  </ng-template>
+<ng-template #userpage let-modal>
+  <div class="modal-header myform bg-dark">
+    <h4 class="modal-title" id="modal-basic-title">{{currentUsername}}</h4>
+  </div>
+  <div class="modal-body myform bg-dark">
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="logout()">LOGOUT</button>
+  </div>
+</ng-template>
+
+
+
+
+
 
 
 

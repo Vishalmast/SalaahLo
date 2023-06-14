@@ -1,0 +1,25 @@
+<div class="chats vh-100  pt-5 ps-5 pe-5">
+    <!-- <h1>Messages</h1> -->
+<ul class="chat-list mt-5 pt-5">
+  <li *ngFor="let chat of chats" (click)="openChatWindow(chat)">
+    <div class="chat-item">
+      <div class="chat-avatar">
+        <img [src]="chat.avatarUrl" alt="Avatar">
+      </div>
+      <div class="chat-details">
+        <div class="chat-header">
+          <h3>{{ chat.name }}</h3>
+          <p class="chat-time">{{ chat.time | date:'MMM d, yyyy - hh:mm a' }}</p>
+        </div>
+        <p class="chat-message">{{ chat.lastMessage }}</p>
+        <div class="pending-messages" *ngIf="chat.pendingMessages > 0">
+            <span class="pending-message-count">{{ chat.pendingMessages }}</span>
+            <span class="pending-message-label" [hidden]="chat.pendingMessages === 1">messages</span>
+            <span class="pending-message-label" [hidden]="chat.pendingMessages !== 1">message</span>
+          </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</div>

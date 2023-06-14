@@ -7,6 +7,9 @@ import { Profile } from 'src/app/Shared/Models/profile';
   styleUrls: ['./experts.component.css']
 })
 export class ExpertsComponent implements OnInit {
+  filterOptions: string[] = ['Doctor', 'Software Engineer', 'Actor', 'Enterpreneur'];
+  selectedOption: string;
+
   expert: Profile = {
     name : "",
     desc : "",
@@ -25,5 +28,11 @@ export class ExpertsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  resetOption() {
+    this.selectedOption = '';
+  }
+  
+  selectOption(option: string) {
+    this.selectedOption = option;
+  }
 }

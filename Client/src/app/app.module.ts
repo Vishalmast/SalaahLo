@@ -15,6 +15,12 @@ import { SalaahDoComponent } from './home/salaah-do/salaah-do.component';
 import { ExpertsComponent } from './home/experts/experts.component';
 import { ExpertComponent } from './expert/expert.component';
 import { ProfileComponent } from './home/experts/profile/profile.component';
+import { SearchComponent } from './home/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ChatsComponent } from './chats/chats.component';
+import { ChatComponent } from './chat/chat.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,14 +33,19 @@ import { ProfileComponent } from './home/experts/profile/profile.component';
     SalaahDoComponent,
     ExpertsComponent,
     ExpertComponent,
-    ProfileComponent
+    ProfileComponent,
+    SearchComponent,
+    ChatsComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,30 @@
 .heading{
-    left: 43%;
+    /* left: 40px; */
     color: #a15410;
 }
+
+.custom-dropdown{
+    color:white;
+    background-color: #a15410;
+    border-color: #a15410;
+}
+
+.custom-dropdown:hover {
+    /* color: #769d78; */
+    background-color: #769d78;
+}
+
+.dropdown-menu{
+    background-color: #a15410; 
+}
+
+.dropdown-item:hover {
+    background-color: #769d78;
+    color: #FFFFFF; 
+}
+
+.reset, .reset:hover{
+    color: #769d78;
+    background-color: #a15410;
+}
+  

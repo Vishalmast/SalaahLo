@@ -1,0 +1,32 @@
+.search-button:hover {
+    /* background-color: #769d78; */
+    flood-color: #769d78;
+}
+
+.label{
+    background-color: #a15410;
+}
+.labelTitle{
+    color: #769d78;
+}
+
+@keyframes placeholderAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .placeholder-animation {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .placeholder-animation.placeholder-hidden {
+    opacity: 0;
+  }
+  

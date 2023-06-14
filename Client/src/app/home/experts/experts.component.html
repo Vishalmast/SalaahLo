@@ -1,6 +1,45 @@
-<div class="mt-5 pt-4">
-    <h2 class="heading position-absolute">Our Experts</h2>
-    <div class="mt-5 pt-5 ms-5">
-        <app-profile [expert]="expert"></app-profile>
+<div class="mt-5 ms-5 ps-2">
+  <div class="mb-5 pb-4">
+    <h2 class="heading text-center me-5">Salaah Lo Experts</h2>
+  </div>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle custom-dropdown" type="button" id="filterDropdown" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      {{ selectedOption || 'Filter' }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+      <li *ngFor="let option of filterOptions">
+        <a class="dropdown-item" href="#" (click)="selectOption(option)">{{ option }}</a>
+      </li>
+    </ul>
+
+    <button *ngIf="selectedOption" type="button" class="btn ms-2 reset" (click)="resetOption()">Clear Filter</button>
+  </div>
+  <div class="mt-5 pt-5" style="display:inline-block;">
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
     </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    
+  </div>
 </div>

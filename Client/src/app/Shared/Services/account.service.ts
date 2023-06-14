@@ -87,4 +87,9 @@ export class AccountService {
                 return x;
             }));
     }
+
+    getProfileImage(username: string) {
+        
+    }
+
 }

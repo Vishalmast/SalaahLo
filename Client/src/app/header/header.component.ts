@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalDismissReasons, NgbDatepickerModule, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { AccountService } from 'src/app/Shared/Services/account.service';
 import { LoginComponent } from './login/login.component';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -15,6 +16,8 @@ export class HeaderComponent {
 	salaahDo: boolean;
 	currentUser: string;
 	currentUsername: string;
+	isChatsActive = false;
+	isFeedActive = false;
 	constructor(
 		private modalService: NgbModal, 
 		private router: Router, 
@@ -38,6 +41,12 @@ export class HeaderComponent {
 		}
 		else{
 			this.salaahDo = false;
+		}
+		if (window.location.href.toString().includes("chat")){
+			this.isChatsActive = true;
+		}
+		if (window.location.href.toString().includes("feed")){
+			this.isFeedActive = true;
 		}
 		console.log(this.activatedRoute);
 	}
