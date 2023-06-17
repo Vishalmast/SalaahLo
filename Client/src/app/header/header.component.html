@@ -12,11 +12,11 @@
       <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item text-center" [class.active]=isFeedActive><a class="nav-link" href="#">Feed</a></li>
-          <li class="nav-item text-center" [class.active]=isChatsActive><a class="nav-link" href="/chats">Chats</a></li>
+          <li class="nav-item text-center" [class.active]=isChatsActive><a class="nav-link" routerLink="/chats">Chats</a></li>
         </ul>
         <ul>
           <span class="nav-item" *ngIf="currentUser === null" (click)="open()">
-            <a class="nav-link btn me-4 pt-2" style="color: white;" href="#">Login</a>
+            <a class="nav-link btn me-4 pt-2" style="color: white;" >Login</a>
           </span>
           <div class="nav-item pt-0 mt-1 btn" *ngIf="currentUser !== null">
             <div ngbDropdown class="d-inline-block">
@@ -57,8 +57,8 @@
 
 
 
-<!-- 
-  
+<!--
+
   <div class="modal-body w-100 h-100">
     <button type="button" (click)="close()" class="btn-close position-absolute end-0 me-4 bg-dark"></button>
     <div class="myform bg-dark">

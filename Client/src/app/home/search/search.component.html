@@ -1,27 +1,24 @@
 <div class="ps-4 pe-4 ">
-
-    <div class="mt-5 pt-5">
-
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control placeholder-animation" #searchInput [(ngModel)]="search"
-            [placeholder]="currentPlaceholder" aria-label="Search" (keyup.enter)="searchClick(); searchInput.blur()"
-            aria-describedby="search-button">
-        <button class="btn search-button" type="button" id="search-button" (click)='searchClick()'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-zoom-in"
-                viewBox="0 0 14 16">
-                <path fill="#a15410"
-                    d="M11.5 11h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l4 4a.5.5 0 0 0 .854-.353L14.5 15.5l.354-.854a.5.5 0 0 0-.353-.646l-4-4z" />
-            </svg>
-        </button>
-    </div>
-
-    <div>
-        <span class="label" *ngIf="prevSearch !== undefined && prevSearch !== ''">You Searched for:</span>
-        <span class="prevSearch"> {{prevSearch}}</span>
-    </div>
-    <div class="mt-4">
-        <p *ngIf="prevSearch !== undefined && prevSearch !== ''"><span class="label">Results:</span> Probably you are
-            looking for <span class="labelTitle">Doctors</span>. You can check the matches in "Salaah Lo Experts". </p>
-    </div>
+  <div class="mt-5 pt-5">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control placeholder-animation" #searchInput [(ngModel)]="search"
+      [placeholder]="currentPlaceholder" aria-label="Search" (keyup.enter)="searchClick(); searchInput.blur()"
+      aria-describedby="search-button">
+    <button class="btn search-button" type="button" id="search-button" (click)='searchClick()'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-zoom-in"
+        viewBox="0 0 14 16">
+        <path fill="#a15410"
+          d="M11.5 11h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l4 4a.5.5 0 0 0 .854-.353L14.5 15.5l.354-.854a.5.5 0 0 0-.353-.646l-4-4z" />
+      </svg>
+    </button>
+  </div>
+  <div>
+    <span class="label" *ngIf="prevSearch !== undefined && prevSearch !== ''">You Searched for:</span>
+    <span class="prevSearch"> {{prevSearch}}</span>
+  </div>
+  <div class="mt-4">
+    <p *ngIf="prevSearch !== undefined && prevSearch !== ''"><span class="label">Results:</span> Probably you are
+      looking for <span class="labelTitle">Doctors</span>. You can check the matches in "Salaah Lo Experts". </p>
+  </div>
 </div>
