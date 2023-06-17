@@ -1,8 +1,8 @@
-<div class="mt-5 ms-5 ps-2">
-  <div class="mb-5 pb-4">
-    <h2 class="heading text-center me-5">Salaah Lo Experts</h2>
+<div class="mt-5">
+  <div class="mb-1">
+    <h2 class="heading text-center">Salaah Lo Experts</h2>
   </div>
-  <div class="dropdown">
+  <div class="paddingButton dropdown d-flex justify-content-md-start">
     <button class="btn dropdown-toggle custom-dropdown" type="button" id="filterDropdown" data-bs-toggle="dropdown"
       aria-expanded="false">
       {{ selectedOption || 'Filter' }}
@@ -15,31 +15,74 @@
 
     <button *ngIf="selectedOption" type="button" class="btn ms-2 reset" (click)="resetOption()">Clear Filter</button>
   </div>
-  <div class="mt-5 pt-5" style="display:inline-block;">
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+
+  <div class="d-flex justify-content-around flex-wrap profileLoop p-3">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+    <div mt-4>
       <app-profile [expert]="expert"></app-profile>
     </div>
-    
+    <div mt-4>
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div mt-4>
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div mt-4>
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div mt-4>
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div mt-4>
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+
   </div>
+  <!-- <div class="mt-5 pt-5" style="display:inline-block;">
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+    <div style="display:inline-block;margin:4px; margin-left: 31px; margin-bottom: 34px;">
+      <app-profile [expert]="expert"></app-profile>
+    </div>
+
+  </div> -->
 </div>

@@ -1,30 +1,41 @@
-.heading{
-    /* left: 40px; */
-    color: #a15410;
+.heading {
+  /* left: 40px; */
+  color: #a15410;
 }
 
-.custom-dropdown{
-    color:white;
-    background-color: #a15410;
-    border-color: #a15410;
+.custom-dropdown {
+  color: white;
+  background-color: #a15410;
+  border-color: #a15410;
 }
 
 .custom-dropdown:hover {
-    /* color: #769d78; */
-    background-color: #769d78;
+  /* color: #769d78; */
+  background-color: #769d78;
 }
 
-.dropdown-menu{
-    background-color: #a15410; 
+.dropdown-menu {
+  background-color: #a15410;
 }
 
 .dropdown-item:hover {
-    background-color: #769d78;
-    color: #FFFFFF; 
+  background-color: #769d78;
+  color: #ffffff;
 }
 
-.reset, .reset:hover{
-    color: #769d78;
-    background-color: #a15410;
+.reset,
+.reset:hover {
+  color: #769d78;
+  background-color: #a15410;
 }
-  
+
+.profileLoop {
+  margin: -10px 0 0 0;
+}
+.profileLoop > * {
+  margin-top: 40px;
+}
+
+.paddingButton {
+  margin-left: 3.5%;
+}
