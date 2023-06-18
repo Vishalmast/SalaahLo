@@ -19,7 +19,7 @@ import { SearchComponent } from './home/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ChatsComponent } from './chats/chats.component';
 import { ChatComponent } from './chat/chat.component';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -45,9 +45,9 @@ import { ChatComponent } from './chat/chat.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-  
+
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
